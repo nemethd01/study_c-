@@ -1,0 +1,5 @@
+﻿  GuessMyNumber.cpp
+C:\Users\domit\source\repos\GuessMyNumber\GuessMyNumber\GuessMyNumber.cpp(4,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GuessMyNumber.vcxproj -> C:\Users\domit\source\repos\GuessMyNumber\x64\Debug\GuessMyNumber.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
