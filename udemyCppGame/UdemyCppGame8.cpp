@@ -55,4 +55,8 @@ int main()
 		}
 	}
 
+	for (std::pair<const std::string, int>& pair : wordCountMap)
+	{
+		std::cout << "Word: " << pair.first << " is repeated: " << pair.second << std::endl;
+	}
 }
