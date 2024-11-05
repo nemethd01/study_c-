@@ -19,5 +19,38 @@ int main()
 	}
 
 	//int smallest = randomNumbers[0];
-	int smallest = std::numeric_limits<int>::min();
+	/* int smallest = std::numeric_limits<int>::max();
+	for (int num : randomNumbers)
+	{
+		if (num < smallest)
+		{
+			smallest = num;
+		}
+	}
+
+	std::cout << "The smallest number is: " << smallest << std::endl; */
+
+
+	std::cout << "--------------------------- \n";
+	// sorting - from smallest to biggest
+	// bubble sort - SLOW (itt ezt használjuk)
+	// quick sort - fastest
+	// merge sort
+	// insertion sort
+	// binary heap sort
+	for (int i = 0; i < randomNumbers.size(); ++i)
+	{
+		for (int j = i + 1; j < randomNumbers.size(); ++j)
+		{
+			if (randomNumbers[i] > randomNumbers[j])
+			{
+				std::swap(randomNumbers[i], randomNumbers[j]);
+			}
+		}
+	}
+
+	for (int num : randomNumbers)
+	{
+		std::cout << num << " ";
+	}
 }
