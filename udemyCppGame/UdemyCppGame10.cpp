@@ -61,4 +61,5 @@ int main()
 
 	std::cout << summary<float, int>(1.5, 2) << std::endl;
 	std::cout << summaryOfOthers(1.5, 2, 3, 4, 63, 34, 2.5) << std::endl;
+	std::cout << summaryOfOthers(std::string{"Adam"}, std::string{"Steve"}) << std::endl;
 }
