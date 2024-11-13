@@ -1,5 +1,17 @@
 #include <iostream>
 
+// for stack memory example
+void printInt(int val)
+{
+    std::cout << val << std::endl;
+    {
+        int c = val;
+        std::cout << c << std::endl;
+    } // this is the end of the scope that c is in. C is then automatically removed from memory.
+
+    int d = 10;
+} // both val and d runs out of scope, they are all removed here
+
 int main()
 {
     int x = 5;
@@ -20,7 +32,7 @@ int main()
     std::cout << xPtr << std::endl; // 0x487ffffc54
     std::cout << *static_cast<int*>(xPtr2) << std::endl;*/
 
-    int intArray[5] = {1, 2, 3, 4, 5};
+    /*int intArray[5] = {1, 2, 3, 4, 5};
 
     // array with pointer
     for (int i = 0; i < sizeof(intArray)/sizeof(int); i++)
@@ -29,5 +41,19 @@ int main()
         std::cout << *(intArray + i) << std::endl; // ez ugyanaz
     }
 
-    std::cout << *(intArray + 3) << std::endl;
+    std::cout << *(intArray + 3) << std::endl;*/
+
+
+    // the stack memory
+    int a = 10; // a is create on stack
+
+    int* heapX = new int[3]; // int variable (heapX) with value 3 is created on the heap, and then it's address is stored in the stack variable 'heapX'(which is a pointer).
+
+    delete heapX;
+
+    printInt(a);
+    // heap can be used when need a big storage.
+    // the memory not allocated is not automatically removed.
+
+    // to manually free the memory you need to call delete on the pointer
 }
